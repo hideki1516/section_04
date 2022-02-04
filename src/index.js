@@ -74,17 +74,49 @@
  * デフォルト値 関数の引数に初期値を設定できる
  */
 
-const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
-sayHello("じゃけぇ");
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+// sayHello("じゃけぇ");
 
-const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん`);
-sayHello();
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん`);
+// sayHello();
 
-const orderMenu = (order = "水") => console.log(`ご注文は${order}です`);
-orderMenu("カレー");
+// const orderMenu = (order = "水") => console.log(`ご注文は${order}です`);
+// orderMenu("カレー");
 
 /**
  * スプレッド構文
  */
 
 // 配列の展開
+// const arr1 = [1, 2];
+// // console.log(arr1); // [1, 2]
+// // console.log(...arr1); // 1 2
+
+// const sumFunc = (num1, num2) => console.log(num1 + num2);
+// // sumFunc(arr1[0], arr1[1]);
+// sumFunc(...arr1); // 配列内を順番に処理している
+
+// 配列をまとめる
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1); // 1
+// console.log(num2); // 2
+// console.log(arr3); // [3, 4, 5]
+
+// 配列のコピー、結合
+const arr3 = [10, 20];
+const arr4 = [30, 40];
+
+const arr5 = [...arr4];
+arr5[0] = 100;
+console.log(arr5); // [100, 40]
+console.log(arr4); // [30, 40]
+
+// const arr6 = [...arr3, ...arr4];
+// console.log(arr6); // [10, 20, 30, 40]
+
+// const arr7 = arr3; // 参照が引き継がれてしまう
+// console.log(arr7);
+
+// arr7[0] = 100;
+// console.log(arr3); // [100, 20] 元の配列が影響を受ける
