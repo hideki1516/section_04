@@ -104,13 +104,13 @@
 // console.log(arr3); // [3, 4, 5]
 
 // 配列のコピー、結合
-const arr3 = [10, 20];
-const arr4 = [30, 40];
+// const arr3 = [10, 20];
+// const arr4 = [30, 40];
 
-const arr5 = [...arr4];
-arr5[0] = 100;
-console.log(arr5); // [100, 40]
-console.log(arr4); // [30, 40]
+// const arr5 = [...arr4];
+// arr5[0] = 100;
+// console.log(arr5); // [100, 40]
+// console.log(arr4); // [30, 40]
 
 // const arr6 = [...arr3, ...arr4];
 // console.log(arr6); // [10, 20, 30, 40]
@@ -120,3 +120,43 @@ console.log(arr4); // [30, 40]
 
 // arr7[0] = 100;
 // console.log(arr3); // [100, 20] 元の配列が影響を受ける
+
+/**
+ * map filter 配列の処理
+ */
+
+const nameArr = ["田中", "山田", "じゃけぇ"];
+
+// これまではfor文を使用していた
+// for (let i = 0; i < nameArr.length; i++) {
+//   console.log(`${i + 1}番目は${nameArr[i]}です`);
+// }
+
+// map 新しい配列を生成する
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+
+// console.log(nameArr2);
+
+// map 引数に要素が順番に処理される
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+// 1つ目の引数には値、2つ目の引数にはindex
+
+// filter 条件に一致したものだけ抽出して新しい配列を生成
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1; // 条件式にあった値だけを抽出
+// });
+// console.log(newNumArr);
+
+// 条件を指定してmapで新しい配列を生成
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "じゃけぇ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+
+// console.log(newNameArr);
