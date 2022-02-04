@@ -17,55 +17,74 @@
 /**
  * 分割代入
  */
-const myProfile = {
-  name: "じゃけぇ",
-  age: 28
-};
+// const myProfile = {
+//   name: "じゃけぇ",
+//   age: 28
+// };
 
-const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です`;
-console.log(message1);
+// const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です`;
+// console.log(message1);
 
 // // 分割代入 指定した値を抜き出して名前を設定しておける
-const { name, age } = myProfile;
-const message2 = `名前は${name}です。年齢は${age}歳です`;
-console.log(message2);
+// const { name, age } = myProfile;
+// const message2 = `名前は${name}です。年齢は${age}歳です`;
+// console.log(message2);
 
 // const myProfile = ["じゃけぇ", 28];
 
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です`;
+// console.log(message3);
 
 // // 配列は0から順番に値を抜き出す
-const [name, age] = myProfile;
-const message4 = `配列：名前は${name}です。年齢は${age}歳です`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `配列：名前は${name}です。年齢は${age}歳です`;
+// console.log(message4);
 
-const menu = {
-  main: "カレー",
-  salad: "シーザーサラダ",
-  drink: ["コーヒー", "紅茶"]
-};
+// const menu = {
+//   main: "カレー",
+//   salad: "シーザーサラダ",
+//   drink: ["コーヒー", "紅茶"]
+// };
 
-const {
-  main,
-  salad,
-  drink: [drink1, drink2]
-} = menu;
-const message = `今日のメインは${main}、サラダは${salad}、ドリンクは${drink1}と${drink2}から選べます。`;
-console.log(message);
+// const {
+//   main,
+//   salad,
+//   drink: [drink1, drink2]
+// } = menu;
+// const message = `今日のメインは${main}、サラダは${salad}、ドリンクは${drink1}と${drink2}から選べます。`;
+// console.log(message);
 
-const menu2 = [
-  { main1: "カレー", main2: "うどん" },
-  { salad1: "シーザーサラダ", salad2: "和風サラダ" },
-  { drink1: "コーヒー", drink2: "緑茶" }
-];
+// const menu2 = [
+//   { main1: "カレー", main2: "うどん" },
+//   { salad1: "シーザーサラダ", salad2: "和風サラダ" },
+//   { drink1: "コーヒー", drink2: "緑茶" }
+// ];
 
-const [{ main1, main2 }, { salad1, salad2 }, { drink1, drink2 }] = menu2;
+// const [{ main1, main2 }, { salad1, salad2 }, { drink1, drink2 }] = menu2;
 
-const message2 = `本日のメニューは、
-メインを${main1}と${main2}、
-サラダを${salad1}と${salad2}、
-お飲み物を${drink1}と${drink2}からお選びいただけます。
-`;
+// const message2 = `本日のメニューは、
+// メインを${main1}と${main2}、
+// サラダを${salad1}と${salad2}、
+// お飲み物を${drink1}と${drink2}からお選びいただけます。
+// `;
 
-console.log(message2);
+// console.log(message2);
+
+/**
+ * デフォルト値 関数の引数に初期値を設定できる
+ */
+
+const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+sayHello("じゃけぇ");
+
+const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん`);
+sayHello();
+
+const orderMenu = (order = "水") => console.log(`ご注文は${order}です`);
+orderMenu("カレー");
+
+/**
+ * スプレッド構文
+ */
+
+// 配列の展開
